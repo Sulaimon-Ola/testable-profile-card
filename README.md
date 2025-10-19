@@ -2,7 +2,7 @@
 
 ## 🧠 Overview
 
-This project is a **Profile Card component** built as part of the **Frontend Wizards Stage 0** challenge.  
+This project is a **Profile Card component** built as part of the **HNG Frontend Wizards Stage 0** challenge.  
 It demonstrates the use of **semantic HTML**, **accessible design**, **responsive CSS**, and **vanilla JavaScript** to display user information in a clean and testable layout.
 
 ---
