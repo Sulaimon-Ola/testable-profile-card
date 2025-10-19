@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <title>Profile Card</title>
+  </head>
+  <body>
+    <article data-testid="test-profile-card">
+      <figure>
+        <img
+          src="/assets/images/sulaimon passport.jpg"
+          alt="User avatar"
+          data-testid="test-user-avatar"
+        />
+      </figure>
+
+      <div>
+        <header>
+          <h2 data-testid="test-user-name">Sulaimon Olayiwola</h2>
+        </header>
+
+        <p data-testid="test-user-bio">
+          I am an enthusiastic and dedicated software engineer, passionate about
+          creating seamless user experiences and optimizing performance in web
+          applications with a strong focus on fullstack development.
+        </p>
+
+        <p>Current Time: <span data-testid="test-user-time"></span></p>
+
+        <nav data-testid="test-user-social-links">
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-testid="test-user-social-linkedin"
+            >Linkedin</a
+          >
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-testid="test-user-social-twitter"
+            >Twitter</a
+          >
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-testid="test-user-social-github"
+            >GitHub</a
+          >
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-testid="test-user-social-instagram"
+            >Instagram</a
+          >
+        </nav>
+
+        <div class="interest">
+          <section>
+            <h3>Hobbies</h3>
+            <ul data-testid="test-user-hobbies">
+              <li>Coding</li>
+              <li>Reading</li>
+              <li>Travelling</li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>Dislikes</h3>
+            <ul data-testid="test-user-dislikes">
+              <li>Noise</li>
+              <li>Cheating</li>
+              <li>Laziness</li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </article>
+
+    <script src="./assets/js/script.js" defer></script>
+  </body>
+</html>
