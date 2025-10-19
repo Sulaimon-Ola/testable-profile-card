@@ -1,0 +1,152 @@
+/* A reset ensures consistent rendering across browsers: */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Define a Base Theme */
+:root {
+  --primary-color: #207681;
+  --secondary-color: #071211;
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --card-radius: 16px;
+  --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --font-family: "Poppins", sans-serif;
+}
+
+/* Style the Body */
+body {
+  font-family: var(--font-family);
+  background: linear-gradient(
+    135deg,
+    var(--secondary-color),
+    var(--primary-color)
+  );
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Create a flexible, responsive card layout: */
+article[data-testid="test-profile-card"] {
+  background-color: var(--bg-color);
+  border-radius: var(--card-radius);
+  box-shadow: var(--shadow);
+  padding: 2rem;
+  display: flex;
+  gap: 2rem;
+  max-width: 600px;
+  width: 90%;
+  transition: transform 0.3s ease;
+}
+
+article[data-testid="test-profile-card"]:hover {
+  transform: translateY(-5px);
+}
+
+/* Ensure the image is clean, circular, and responsive: */
+figure img[data-testid="test-user-avatar"] {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--primary-color);
+}
+
+/* Text and Bio */
+h2[data-testid="test-user-name"] {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+p[data-testid="test-user-bio"] {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+/* Social Links: Make them look neat and focusable: */
+nav[data-testid="test-user-social-links"] {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+nav[data-testid="test-user-social-links"] a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav[data-testid="test-user-social-links"] a:hover,
+nav[data-testid="test-user-social-links"] a:focus {
+  color: var(--secondary-color);
+  text-decoration: underline;
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* Style the two lists separately but consistently: */
+.interest {
+  display: flex;
+  flex-direction: row;
+  gap: 6rem;
+}
+
+section {
+  margin-bottom: 1rem;
+}
+
+section h3 {
+  color: var(--secondary-color);
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+ul[data-testid="test-user-hobbies"],
+ul[data-testid="test-user-dislikes"] {
+  list-style-type: square;
+  margin-left: 1.5rem;
+}
+
+ul li::marker {
+  color: var(--primary-color);
+  font-size: 20px;
+  margin-bottom: 0.3rem;
+}
+
+/* Use media queries to adjust layout for mobile and desktop: */
+@media (max-width: 768px) {
+  article[data-testid="test-profile-card"] {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  figure img[data-testid="test-user-avatar"] {
+    width: 120px;
+    height: 120px;
+  }
+
+  p[data-testid="test-user-bio"] {
+    text-align: center;
+  }
+
+  .interest {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  nav[data-testid="test-user-social-links"] {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
