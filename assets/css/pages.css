@@ -1,0 +1,238 @@
+/* ------------------------------------
+   Global Styles
+------------------------------------ */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", "Segoe UI", Roboto, sans-serif;
+  color: #222;
+  background-color: #fafafa;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ------------------------------------
+   Header & Navigation
+------------------------------------ */
+header {
+  background: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 0.75rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+  color: #207681;
+}
+
+/* ------------------------------------
+   Main Layout
+------------------------------------ */
+main {
+  flex: 1;
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+main h1 {
+  text-align: center;
+  color: #207681;
+  margin-bottom: 1.5rem;
+}
+
+/* ------------------------------------
+   About Page Styles
+------------------------------------ */
+.about-page {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.about-page .intro {
+  text-align: center;
+  color: #555;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.about-section {
+  background: #f9f9f9;
+  border-left: 4px solid #207681;
+  padding: 1.2rem 1.5rem;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+}
+
+.about-section:hover {
+  transform: translateY(-3px);
+}
+
+.about-section h2 {
+  color: #207681;
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.about-section p,
+.about-section ul {
+  color: #444;
+  font-size: 1rem;
+}
+
+.about-section ul {
+  list-style: disc inside;
+  margin-top: 0.5rem;
+}
+
+/* ------------------------------------
+   Contact Page Styles
+------------------------------------ */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+input,
+textarea {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  width: 100%;
+  background: #fff;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #207681;
+  box-shadow: 0 0 4px rgba(32, 118, 129, 0.4);
+}
+
+button {
+  background: #207681;
+  color: #fff;
+  border: none;
+  padding: 0.9rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.1s ease-in-out;
+}
+
+button:hover {
+  background: #19aabd;
+  transform: scale(1.02);
+}
+
+/* ------------------------------------
+   Form Validation Feedback
+------------------------------------ */
+.error-message {
+  color: #d93025;
+  font-size: 0.9rem;
+  margin-top: 0.3rem;
+}
+
+.success-message {
+  background: #e6f9ee;
+  border: 1px solid #0f9d58;
+  color: #0f9d58;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 500;
+  margin-top: 1rem;
+}
+
+/* ------------------------------------
+   Footer
+------------------------------------ */
+footer {
+  text-align: center;
+  background: #f0f0f0;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: auto;
+}
+
+/* ------------------------------------
+   Responsive Design
+------------------------------------ */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  main {
+    margin: 1rem;
+    padding: 1rem;
+  }
+
+  .about-section,
+  .form-group {
+    padding: 1rem;
+  }
+
+  button {
+    padding: 0.8rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  main h1 {
+    font-size: 1.6rem;
+  }
+
+  .about-section h2 {
+    font-size: 1.1rem;
+  }
+}
