@@ -1,27 +1,39 @@
-# 🚀 Profile Card
+# 🚀 Frontend Wizards — Profile Card & Multi-Page Project
 
 ## 🧠 Overview
 
-This project is a **Profile Card component** built as part of the **HNG Frontend Wizards Stage 0** challenge.  
-It demonstrates the use of **semantic HTML**, **accessible design**, **responsive CSS**, and **vanilla JavaScript** to display user information in a clean and testable layout.
+This repository contains two stages of the **HNG Frontend Wizards** challenge:
+
+- **Stage 0:** Testable Profile Card — A single-page interactive card showcasing personal details, bio, and social links.  
+- **Stage 1:** Multi-Page Site — A simple, testable, and accessible multi-page website (Home, About Me, Contact).
+
+Both stages demonstrate mastery of **semantic HTML**, **responsive CSS**, and **vanilla JavaScript** with testable data attributes.
 
 ---
 
 ## 🎯 Features
 
+### 🌟 Stage 0 — Profile Card
 - ✅ Semantic HTML structure (article, figure, section, etc.)
 - ✅ Accessible and keyboard-navigable
-- ✅ Responsive design (mobile → desktop)
-- ✅ Live current time in milliseconds using `Date.now()`
-- ✅ Testable elements with required `data-testid` attributes
-- ✅ Secure external social links (`target="_blank" rel="noopener noreferrer"`)
+- ✅ Responsive layout (mobile → desktop)
+- ✅ Dynamic current time in milliseconds (`Date.now()`)
+- ✅ Required `data-testid` attributes for automated testing
+- ✅ Secure social links (`target="_blank" rel="noopener noreferrer"`)
+
+### 🌐 Stage 1 — Multi-Page Application
+- ✅ Three main pages: **Home**, **About Me**, and **Contact**
+- ✅ Each page follows accessible and responsive design
+- ✅ Navigation bar with active page highlighting
+- ✅ Consistent header and footer across all pages
+- ✅ Form validation for contact page
+- ✅ Reflective writing and personal sections on About page
 
 ---
 
 ## 🧩 Required Data Test IDs
 
-Each element includes a specific `data-testid` for automated testing:
-
+### Stage 0 — Profile Card
 | Element                | data-testid                  |
 | ---------------------- | ---------------------------- |
 | Profile card container | `test-profile-card`          |
@@ -34,13 +46,27 @@ Each element includes a specific `data-testid` for automated testing:
 | Hobbies list           | `test-user-hobbies`          |
 | Dislikes list          | `test-user-dislikes`         |
 
+### Stage 1 — Multi-Page Website
+| Page | Section | data-testid |
+|------|----------|-------------|
+| **About Me** | Bio | `test-about-bio` |
+|  | Goals in this program | `test-about-goals` |
+|  | Areas of low confidence | `test-about-confidence` |
+|  | Note to future self | `test-about-future-note` |
+|  | Extra thoughts | `test-about-extra` |
+| **Contact** | Form container | `test-contact-form` |
+|  | Name input | `test-contact-name` |
+|  | Email input | `test-contact-email` |
+|  | Message textarea | `test-contact-message` |
+|  | Submit button | `test-contact-submit` |
+
 ---
 
 ## 🧱 Tech Stack
 
-- **HTML5** — for semantic structure
-- **CSS3 (Flexbox/Grid)** — for styling and responsive layout
-- **JavaScript (Vanilla)** — for dynamic time rendering
+- **HTML5** — Semantic and accessible markup  
+- **CSS3 (Flexbox/Grid)** — Modern responsive layouts  
+- **JavaScript (Vanilla)** — For interactivity and live time rendering  
 
 ---
 
@@ -75,6 +101,10 @@ To run this project locally:
 3. Open the `index.html` file in your browser:
    ```bash
    open index.html
+   open about.html
+   open contact.html
+
+
    ```
    or simply drag it into your browser window.
 
